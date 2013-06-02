@@ -40,7 +40,7 @@ define(function (require, exports, module) {
             var text = document.createTextNode(widget);
             widget = document.createElement("span");
             widget.appendChild(text);
-            widget.className = "CodeMirror-foldmarker";
+            widget.className = "CodeMirror-matchingbracket CodeMirror-foldmarker";
         }
     
         return function (cm, pos) {
