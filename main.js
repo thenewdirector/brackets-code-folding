@@ -65,7 +65,7 @@ define(function (require, exports, module) {
         if (_lineFolds.indexOf(lineNum - 1) === -1) {
             _lineFolds.push(lineNum - 1);
         }
-        return _createMarker(_collapsedChar, "codefolding-collapsed");
+        return _createMarker(_collapsedChar, "");
     }
     
     function _createExpandedMarker(lineNum) {
@@ -73,7 +73,7 @@ define(function (require, exports, module) {
         if (index > -1) {
             _lineFolds.splice(index, 1);
         }
-        return _createMarker(_expandedChar, "codefolding-expanded");
+        return _createMarker(_expandedChar, "");
     }
     
     function _getCollapsibleLines(cm, rangeFinder) {
